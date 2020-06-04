@@ -23,7 +23,9 @@
         "dist/@alfresco/adf-office-services-ext/*"
       ],
       "@alfresco/aca-shared": ["dist/@alfresco/aca-shared"],
-      "@alfresco/aca-shared/*": ["dist/@alfresco/aca-shared/*"]
+      "@alfresco/aca-shared/*": ["dist/@alfresco/aca-shared/*"],
+      "@arondor/arender-viewer": ["dist/@arondor/arender-viewer"],
+      "@arondor/arender-viewer/*": ["dist/@arondor/arender-viewer/*"]
     },
     "resolveJsonModule": true
   },

@@ -23,6 +23,11 @@
     "logo": "assets/images/alfresco-logo-flower.svg",
     "copyright": "APP.COPYRIGHT"
   },
+  "arender" :{
+    "host": "{protocol}//{hostname}:{port}/arender/",
+    "onPromise": true,
+    "documentbuilder":true
+  },
   "viewer.maxRetries": 1,
   "sharedLinkDateTimePickerType": "date",
   "headerColor": "#2196F3",

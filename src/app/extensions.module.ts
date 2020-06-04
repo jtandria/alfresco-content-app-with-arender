@@ -25,11 +25,12 @@
 
 import { NgModule } from '@angular/core';
 import { AosExtensionModule } from '@alfresco/adf-office-services-ext';
+import { ArenderExtensionModule } from '@arondor/arender-viewer';
 
 // Main entry point for external extensions only.
 // For any application-specific code use CoreExtensionsModule instead.
 
 @NgModule({
-  imports: [AosExtensionModule]
+  imports: [AosExtensionModule, ArenderExtensionModule]
 })
 export class AppExtensionsModule {}

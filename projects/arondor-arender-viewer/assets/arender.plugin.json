@@ -1,0 +1,63 @@
+{
+  "$schema": "../../../extension.schema.json",
+  "$license": "apache",
+  "$runtime": "1.6.0",
+  "$version": "1.0.0",
+  "$vendor": "Arondor",
+  "$id": "eabf7bad4e9a22defcccca945c4bfd16",
+  "$name": "arondor.arender.plugin",
+  "$description": "Extension that provides Viewing documents in ARender viewer",
+
+  "features": {
+    "viewer": {
+      "content": [{
+        "id": "app.arender.viewer",
+        "fileExtension": [
+          "pdf",
+          "docx", "docm", "dotx", "dotm", "doc", "dot",
+          "rtf", "odt", "ott",
+          "xlsx", "xlsm", "xls", "xlt", "xml", "csv",
+          "ods", "ots",
+          "pptx", "pptm", "ppt", "pps",
+          "odp", "otp", "vsdx",
+          "msg", "eml",
+          "html", "htm",
+          "txt",
+          "dwg", "dxf", "tif", "tiff", "dcm",
+          "mda", "ica", "mmr", "mca",
+          "jpg", "jpeg", "jpe", "jfif", "jp2", "jpf", "jpx", "j2k", "j2c", "jpc",
+          "png", "gif", "webp", "bmp",
+          "mp4"
+        ],
+        "component": "app.arender.viewer"
+      }]
+    },
+    "toolbar": [{
+      "id": "app.toolbar.more",
+      "children": [{
+        "id": "app.arender.compare.open",
+        "order": 330,
+        "title": "ARENDER.COMPARE_TITLE",
+        "icon": "compare",
+        "actions": {
+          "click": "ARENDER_COMPARE"
+        },
+        "rules": {
+          "visible": "app.selection.canCompareFile"
+        }
+      }]
+    }],
+    "contextMenu": [{
+      "id": "app.arender.window.open",
+      "order": 330,
+      "title": "ARENDER.OPEN_TITLE",
+      "icon": "visibility",
+      "actions": {
+        "click": "ARENDER_OPEN"
+      },
+      "rules": {
+        "visible": "!app.selection.library"
+      }
+    }]
+  }
+}

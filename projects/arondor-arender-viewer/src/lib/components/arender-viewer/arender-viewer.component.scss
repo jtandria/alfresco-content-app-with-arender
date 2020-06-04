@@ -1,0 +1,11 @@
+adf-preview-extension,
+.adf-viewer-content-container,
+.adf-viewer__fullscreen-container {
+  height: 100%;
+  width: 100%;
+}
+
+.adf-viewer-custom-content {
+  overflow: scroll;
+  height: 100%;
+}

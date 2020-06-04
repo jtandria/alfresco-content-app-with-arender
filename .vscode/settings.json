@@ -9,5 +9,10 @@
   },
   "markdownlint.config": {
     "MD033": false
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#0B3422",
+    "titleBar.activeBackground": "#0F492F",
+    "titleBar.activeForeground": "#F2FCF8"
   }
 }

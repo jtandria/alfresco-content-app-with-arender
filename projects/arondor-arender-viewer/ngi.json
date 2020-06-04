@@ -1,0 +1,20 @@
+{
+  "assets": [
+    {
+      "glob": "**/*",
+      "input": "./assets/i18n",
+      "output": "./assets/arender-viewer/i18n"
+    },
+    {
+      "glob": "arender.plugin.json",
+      "input": "./assets",
+      "output": "./assets/plugins"
+    }
+  ],
+  "modules": [
+    {
+      "name": "ArenderExtensionModule",
+      "namespace": "@arondor/arender-viewer"
+    }
+  ]
+}

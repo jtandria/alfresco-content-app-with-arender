@@ -9,7 +9,17 @@
       "request": "launch",
       "name": "Lancer Edge en utilisant localhost",
       "url": "http://localhost:4200",
-      "webRoot": "${workspaceFolder}"
+      "webRoot": "${workspaceFolder}",
+      "trace": true,
+      "sourceMapPathOverrides": {
+        "webpack:/*": "${webRoot}/*",
+        "/./*": "${webRoot}/*",
+        "/src/*": "${webRoot}/*",
+        "./*": "${webRoot}/*",
+        "_karma_webpack_/*": "${webRoot}/*",
+        "/./~/*": "${workspaceFolder}/node_modules/*",
+        "arender/*": "${workspaceFolder}/projects/arondor-arender-viewer/src/lib/*"
+      }
     }
   ]
 }

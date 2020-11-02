@@ -5,7 +5,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { ArenderService } from './services/arender.service';
 import { ArenderEffects } from './effects/arender.effects';
 
-import { canCompareFile } from './rules/arender.rules';
+import * as rules from './rules/arender.rules';
 
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -43,7 +43,8 @@ export class ArenderExtensionModule {
   constructor(extensions: ExtensionService, translation: TranslationService) {
     translation.addTranslationFolder('arender-viewer', 'assets/arender-viewer');
     extensions.setEvaluators({
-      'app.selection.canCompareFile': canCompareFile
+      'app.selection.canCompareFile': rules.canCompareFile,
+      'app.arender.allowed': rules.isARenderGroupMember
     });
     extensions.setComponents({
       'app.arender.viewer': ArenderViewerComponent

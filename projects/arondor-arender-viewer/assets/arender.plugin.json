@@ -8,6 +8,16 @@
   "$name": "arondor.arender.plugin",
   "$description": "Extension that provides Viewing documents in ARender viewer",
 
+  "rules": [
+    {
+      "id": "app.contextMenu.arender.canOpen",
+      "type": "core.every",
+      "parameters": [
+        { "type": "rule", "value": "!app.selection.library" },
+        { "type": "rule", "value": "app.arender.allowed" }
+      ]
+    }
+  ],
   "features": {
     "viewer": {
       "content": [
@@ -67,7 +77,8 @@
             "gif",
             "webp",
             "bmp",
-            "mp4"
+            "mp4",
+            "zip"
           ],
           "component": "app.arender.viewer"
         }
@@ -102,7 +113,7 @@
           "click": "ARENDER_OPEN"
         },
         "rules": {
-          "visible": "!app.selection.library"
+          "visible": "app.contextMenu.arender.canOpen"
         }
       },
       {

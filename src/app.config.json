@@ -24,9 +24,13 @@
     "copyright": "APP.COPYRIGHT"
   },
   "arender" :{
-    "host": "{protocol}//{hostname}:{port}/arender/",
+    "host": "{protocol}//{hostname}:8888/",
     "onPromise": true,
-    "documentbuilder":true
+    "documentbuilder":true,
+    "allowedGroups": [
+      "GROUP_ARENDER_TEST",
+      "GROUP_ALFRESCO_ADMINISTRATORS"
+    ]
   },
   "viewer.maxRetries": 1,
   "sharedLinkDateTimePickerType": "date",
